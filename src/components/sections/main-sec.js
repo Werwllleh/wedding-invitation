@@ -10,7 +10,7 @@ const MainSec = () => {
       <div className="main-section__text">
         <h1 className="main-section__title h-title">Алексей и Анастасия</h1>
         <h4 className="main-section__date">
-          {formatDate(process.env.NEXT_PUBLIC_DATE, 'DD-MMMM-YYYY')}
+          {formatDate(process.env.NEXT_PUBLIC_DATE || '2025-08-10T00:00:00', 'DD-MMMM-YYYY')}
         </h4>
       </div>
       <div className="main-section__bg">

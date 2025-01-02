@@ -11,7 +11,7 @@ const DescriptionsSec = () => {
             <p className="descriptions-sec__text text">В нашей жизни предстоят счастливые перемены! Мы хотим, чтобы в этот
               день рядом с нами были самые близкие и дорогие для нас люди. Будем рады разделить с вами чудесный праздник
               в день нашей свадьбы.</p>
-            <span className="descriptions-sec__date">{formatDate(process.env.NEXT_PUBLIC_DATE, 'DD.MM.YYYY')}</span>
+            <span className="descriptions-sec__date">{formatDate(process.env.NEXT_PUBLIC_DATE || '2025-08-10T00:00:00', 'DD.MM.YYYY')}</span>
           </div>
           <div className="descriptions-sec__photos">
             <img src="/photo/ds-1.jpg" alt=""/>
