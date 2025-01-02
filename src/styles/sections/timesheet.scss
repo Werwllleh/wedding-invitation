@@ -1,0 +1,41 @@
+.timesheet {
+  padding: 7rem 0;
+  background-color: $beige;
+
+  &__body {}
+
+  &__title {}
+
+  &__flex {
+    margin: 5rem 0 0 0;
+    display: flex;
+    align-items: stretch;
+    gap: 3rem;
+  }
+
+  &__col {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+
+    &-time {
+      user-select: none;
+      font-size: 4rem;
+      font-weight: 200;
+    }
+
+    &-about {
+      user-select: none;
+      font-family: $ff-decor;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      height: 6.5rem;
+    }
+
+    &-text {
+      font-size: 2rem !important;
+    }
+  }
+}

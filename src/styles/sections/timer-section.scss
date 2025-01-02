@@ -1,0 +1,16 @@
+.timer-sec {
+  padding: 7rem 0;
+  background-color: $beige;
+
+  &__body {}
+
+  &__title {
+    text-align: center;
+  }
+
+  &__timer {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+  }
+}

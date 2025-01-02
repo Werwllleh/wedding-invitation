@@ -1,0 +1,53 @@
+p, span {
+  user-select: none;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+.h1 {
+  font-size: 3.8rem;
+  line-height: 1.4;
+  color: $black;
+  font-weight: 500;
+  text-align: center;
+
+  @include sm {
+    font-size: 2.4rem;
+  }
+
+}
+
+.h-title {
+  font-family: $ff-decor;
+  font-weight: 300;
+  letter-spacing: -0.5rem;
+  user-select: none;
+}
+
+.sec-title {
+  user-select: none;
+  font-family: $ff-decor;
+  font-size: 8rem;
+  text-transform: uppercase;
+}
+
+.text {
+  user-select: none;
+  font-size: 2.3rem;
+  font-weight: 300;
+  letter-spacing: -0.085rem;
+  line-height: 1.55;
+}
+
+.style-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  transition: background-color $transition, color $transition;
+  user-select: none;
+}

@@ -1,0 +1,36 @@
+.timer {
+  display: grid;
+  grid-template-columns: 11rem 3.2rem 11rem 3.2rem 11rem 3.2rem 11rem;
+  font-size: 6rem;
+  justify-items: center;
+  max-width: 60rem;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    pointer-events: none;
+    user-select: none;
+    color: $dark;
+    font-weight: 200;
+
+    &::before {
+      content: attr(data-title);
+      display: block;
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      color: $semi-dark;
+      font-weight: 400;
+    }
+  }
+
+  &__separator {
+    padding: 0 1rem;
+    pointer-events: none;
+    user-select: none;
+    font-weight: 200;
+  }
+}
