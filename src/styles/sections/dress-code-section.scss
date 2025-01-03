@@ -1,0 +1,98 @@
+.dress-code-sec {
+  padding: 7rem 0;
+  background-color: $bg2;
+
+  &__body {
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 80rem;
+    margin: 5rem auto 0 auto;
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__colors {
+    margin: 3rem 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  &__color {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  &__photos {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    img {
+      display: flex;
+      object-fit: cover;
+
+      &:nth-child(1) {
+        flex: 1 1 34%;
+        max-height: 20rem;
+      }
+
+      &:nth-child(2) {
+        flex: 1 1 63%;
+        max-height: 20rem;
+      }
+
+      &:nth-child(3) {
+        flex: 1 1 31%;
+        max-height: 23rem;
+      }
+
+      &:nth-child(4) {
+        flex: 1 1 31%;
+        max-height: 23rem;
+      }
+
+      &:nth-child(5) {
+        flex: 1 1 31%;
+        max-height: 23rem;
+      }
+    }
+  }
+
+  &__about {
+    margin: 5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    &-item {}
+
+    &-title {
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    &-text {
+      margin: 1rem 0 0 0;
+      font-size: 2rem;
+      text-align: center;
+      max-width: 55rem;
+      font-weight: 300;
+      line-height: 1.35;
+    }
+  }
+
+}

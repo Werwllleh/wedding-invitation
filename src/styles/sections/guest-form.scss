@@ -1,0 +1,90 @@
+.guest-form {
+  padding: 7rem 0;
+  background-color: $beige;
+
+  &__body {}
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    margin: 5rem 0 0 0;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__form {
+    max-width: 60rem;
+    margin: 5rem auto 0 auto;
+
+
+    label, .ant-form-item-explain-error {
+      font-family: $ff-main;
+      letter-spacing: 0 !important;
+    }
+
+    .ant-form-item-required {
+      user-select: none;
+      color: $dark !important;
+      font-size: 1.8rem !important;
+    }
+
+    .ant-radio-group {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+
+      .ant-radio-button-wrapper {
+        flex: 1 1 33%;
+        border-radius: 0;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.35;
+        font-size: 1.6rem;
+        text-align: center;
+        background-color: $semi-white;
+        border: none;
+        padding: .5rem 1rem;
+        font-weight: 400;
+        color: $dark;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .ant-radio-button-wrapper-checked {
+        color: $white;
+        background-color: $button-color;
+      }
+    }
+
+
+    &-fields {}
+
+    &-textarea {
+      background-color: $semi-white;
+      font-family: $ff-main;
+      font-weight: 400;
+      color: $dark;
+      border: none;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-submit {
+      margin: 0 auto;
+      background-color: $button-color;
+      color: $semi-white;
+      font-weight: 500;
+    }
+  }
+}

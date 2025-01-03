@@ -1,4 +1,4 @@
-p, span {
+h1, h2, h3, h4, h5, p, span {
   user-select: none;
 }
 
@@ -50,4 +50,8 @@ img {
   font-size: 1.6rem;
   transition: background-color $transition, color $transition;
   user-select: none;
+}
+
+.ant-input {
+  border-radius: 0;
 }

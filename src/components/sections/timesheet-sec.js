@@ -24,7 +24,7 @@ const info = [
   },
 ]
 
-const Timesheet = () => {
+const TimesheetSec = () => {
   return (
     <div className="timesheet">
       <div className="container">
@@ -47,4 +47,4 @@ const Timesheet = () => {
   );
 };
 
-export default Timesheet;
+export default TimesheetSec;

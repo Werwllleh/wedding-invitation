@@ -1,6 +1,5 @@
 import "@/styles/index.scss";
 
-
 export const metadata = {
   title: "Свадебное приглашение",
   description: "Свадебное приглашение Алексея и Анастасии",

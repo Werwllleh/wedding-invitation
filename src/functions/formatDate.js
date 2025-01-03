@@ -14,7 +14,7 @@ export const formatDate = (date, format) => {
   const monthIndex = dayjs(date).locale('ru').month(); // Индекс месяца (0-11)
   const year = dayjs(date).locale('ru').format('YYYY'); // Год
 
-  if (format.includes('MMMM')) {
+  if (format && format.includes('MMMM')) {
     return `${day} ${monthsGenitive[monthIndex]} ${year}`;
   } else {
     return dayjs(date).format(format);
