@@ -1,6 +1,8 @@
+@use "../variables";
+
 .guest-form {
   padding: 7rem 0;
-  background-color: $beige;
+  background-color: variables.$beige;
 
   &__body {}
 
@@ -22,13 +24,13 @@
 
 
     label, .ant-form-item-explain-error {
-      font-family: $ff-main;
+      font-family: variables.$ff-main;
       letter-spacing: 0 !important;
     }
 
     .ant-form-item-required {
       user-select: none;
-      color: $dark !important;
+      color: variables.$dark !important;
       font-size: 1.8rem !important;
     }
 
@@ -47,11 +49,11 @@
         line-height: 1.35;
         font-size: 1.6rem;
         text-align: center;
-        background-color: $semi-white;
+        background-color: variables.$semi-white;
         border: none;
         padding: .5rem 1rem;
         font-weight: 400;
-        color: $dark;
+        color: variables.$dark;
 
         &::before {
           display: none;
@@ -59,8 +61,8 @@
       }
 
       .ant-radio-button-wrapper-checked {
-        color: $white;
-        background-color: $button-color;
+        color: variables.$white;
+        background-color: variables.$button-color;
       }
     }
 
@@ -68,10 +70,10 @@
     &-fields {}
 
     &-textarea {
-      background-color: $semi-white;
-      font-family: $ff-main;
+      background-color: variables.$semi-white;
+      font-family: variables.$ff-main;
       font-weight: 400;
-      color: $dark;
+      color: variables.$dark;
       border: none;
     }
 
@@ -82,8 +84,8 @@
 
     &-submit {
       margin: 0 auto;
-      background-color: $button-color;
-      color: $semi-white;
+      background-color: variables.$button-color;
+      color: variables.$semi-white;
       font-weight: 500;
     }
   }

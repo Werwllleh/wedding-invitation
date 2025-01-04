@@ -1,6 +1,8 @@
+@use "../variables";
+
 .timer-sec {
   padding: 7rem 0;
-  background-color: $beige;
+  background-color: variables.$beige;
 
   &__body {}
 

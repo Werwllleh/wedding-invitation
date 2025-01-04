@@ -1,6 +1,8 @@
+@use "../variables";
+
 .dress-code-sec {
   padding: 7rem 0;
-  background-color: $bg2;
+  background-color: variables.$bg2;
 
   &__body {
   }

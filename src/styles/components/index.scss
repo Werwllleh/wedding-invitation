@@ -1,7 +1,7 @@
-@import "header.scss";
-@import "footer.scss";
-@import "timer";
+@use "header.scss";
+@use "footer.scss";
+@use "timer";
 
 
 
-@import "./icons/index";
+@use "icons/index";

@@ -1,3 +1,5 @@
+@use "../variables";
+
 .timer {
   display: grid;
   grid-template-columns: 11rem 3.2rem 11rem 3.2rem 11rem 3.2rem 11rem;
@@ -11,7 +13,7 @@
     position: relative;
     pointer-events: none;
     user-select: none;
-    color: $dark;
+    color: variables.$dark;
     font-weight: 200;
 
     &::before {
@@ -22,7 +24,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 1.5rem;
-      color: $semi-dark;
+      color: variables.$semi-dark;
       font-weight: 400;
     }
   }

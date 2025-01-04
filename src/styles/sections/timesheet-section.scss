@@ -1,6 +1,8 @@
+@use "../variables";
+
 .timesheet {
   padding: 7rem 0;
-  background-color: $beige;
+  background-color: variables.$beige;
 
   &__body {}
 
@@ -28,7 +30,7 @@
 
     &-about {
       user-select: none;
-      font-family: $ff-decor;
+      font-family: variables.$ff-decor;
       font-size: 2.5rem;
       text-transform: uppercase;
       height: 6.5rem;

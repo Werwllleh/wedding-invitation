@@ -1,6 +1,8 @@
+@use "../variables";
+
 .detail-sec {
   padding: 7rem 0 10rem;
-  background-color: $beige;
+  background-color: variables.$beige;
 
   &__body {}
 
@@ -20,7 +22,7 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
 
     &-body {
-      background-color: $white;
+      background-color: variables.$white;
       padding: 2rem;
       height: 100%;
     }
