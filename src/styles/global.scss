@@ -3,6 +3,11 @@
 
 h1, h2, h3, h4, h5, p, span {
   user-select: none;
+  transition: font-size variables.$transition;
+}
+
+section {
+  transition: padding variables.$transition;
 }
 
 img {
@@ -35,6 +40,30 @@ img {
   font-family: variables.$ff-decor;
   font-size: 8rem;
   text-transform: uppercase;
+  transition: font-size variables.$transition;
+
+  @include breakpoints.xxl {
+    font-size: 6rem;
+  }
+
+  @include breakpoints.xl {
+    font-size: 5rem;
+    letter-spacing: 0;
+  }
+
+  @include breakpoints.lg {
+    font-size: 4.5rem;
+  }
+
+  @include breakpoints.md {
+    font-size: 4rem;
+  }
+
+  @include breakpoints.sm {
+    font-size: 3.5rem;
+  }
+
+
 }
 
 .text {

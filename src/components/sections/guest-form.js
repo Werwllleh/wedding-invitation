@@ -50,8 +50,8 @@ const GuestForm = () => {
         <div className="guest-form__body">
           <h2 className="guest-form__title sec-title">Анкета гостя</h2>
           <div className="guest-form__text text">
-            <p>Ваши ответы на вопросы очень помогут нам при организации свадьбы.</p>
-            <p>Будем ждать ответ до {formatDate('2025.07.01', 'DD.MMMM.YYYY')} г.</p>
+            <p>Ваши ответы на&nbsp;вопросы очень помогут нам при&nbsp;организации свадьбы.</p>
+            <p>Будем ждать ответ до&nbsp;{formatDate('2025.07.01', 'DD.MMMM.YYYY')}&nbsp;г.</p>
           </div>
           <Form form={form} onFinish={handleSubmit} variant="borderless" className="guest-form__form" layout="vertical">
             <div className="guest-form__form-fields">
@@ -79,6 +79,7 @@ const GuestForm = () => {
               >
                 <Input.TextArea
                   autoSize={{minRows: 2}}
+                  placeholder={'Укажите имена и фамилии'}
                   className="guest-form__form-textarea"
 
                 />

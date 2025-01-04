@@ -1,3 +1,4 @@
+@use "../breakpoints";
 @use "../variables";
 
 .main-section {
@@ -13,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 3rem;
     flex-direction: column;
     z-index: 2;
     pointer-events: none;
@@ -20,14 +22,49 @@
   }
 
   &__title {
+    text-align: center;
     font-size: 17rem;
     color: variables.$white;
+    white-space: nowrap;
+
+    @include breakpoints.xxxl {
+      font-size: 12rem;
+      letter-spacing: 0 !important;
+    }
+
+    @include breakpoints.xxl {
+      font-size: 10rem;
+    }
+
+    @include breakpoints.xl {
+      font-size: 8rem;
+    }
+
+    @include breakpoints.lg {
+      font-size: 6rem;
+    }
+
+    @include breakpoints.md {
+      font-size: 5rem;
+    }
+
+    @include breakpoints.sm {
+      font-size: 4rem;
+    }
   }
 
   &__date {
     font-size: 5rem;
     color: variables.$white;
     font-weight: 300;
+
+    @include breakpoints.lg {
+      font-size: 3.5rem;
+    }
+
+    @include breakpoints.sm {
+      font-size: 2rem;
+    }
   }
 
   &__bg {

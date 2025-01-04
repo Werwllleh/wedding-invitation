@@ -6,6 +6,10 @@ const colors = [
     hex: '#ffffff',
   },
   {
+    title: 'grey',
+    hex: '#cfcfcf',
+  },
+  {
     title: 'black',
     hex: '#20252C',
   },

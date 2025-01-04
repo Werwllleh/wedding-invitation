@@ -1,8 +1,13 @@
 @use "../variables";
+@use "../breakpoints";
 
 .dress-code-sec {
   padding: 7rem 0;
   background-color: variables.$bg2;
+
+  @include breakpoints.md {
+    padding: 5rem 0;
+  }
 
   &__body {
   }
@@ -14,10 +19,18 @@
   &__content {
     max-width: 80rem;
     margin: 5rem auto 0 auto;
+
+    @include breakpoints.lg {
+      margin: 3rem auto 0 auto;
+    }
   }
 
   &__description {
     text-align: center;
+
+    @include breakpoints.lg {
+      font-size: 2rem !important;
+    }
   }
 
   &__colors {
@@ -27,12 +40,26 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 3rem;
+
+    @include breakpoints.md {
+      gap: 2rem;
+    }
   }
 
   &__color {
     display: flex;
     width: 10rem;
     height: 10rem;
+
+    @include breakpoints.lg {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    @include breakpoints.md {
+      width: 6rem;
+      height: 6rem;
+    }
   }
 
   &__photos {
@@ -79,12 +106,20 @@
     align-items: center;
     gap: 3rem;
 
+    @include breakpoints.md {
+      margin: 3rem 0 0 0;
+    }
+
     &-item {}
 
     &-title {
       font-size: 3rem;
       font-weight: 300;
       text-align: center;
+
+      @include breakpoints.md {
+        font-size: 2.6rem;
+      }
     }
 
     &-text {
@@ -94,6 +129,10 @@
       max-width: 55rem;
       font-weight: 300;
       line-height: 1.35;
+
+      @include breakpoints.md {
+        font-size: 1.6rem;
+      }
     }
   }
 

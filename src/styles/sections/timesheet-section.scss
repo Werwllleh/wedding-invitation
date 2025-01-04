@@ -1,31 +1,63 @@
 @use "../variables";
+@use "../breakpoints";
 
 .timesheet {
   padding: 7rem 0;
   background-color: variables.$beige;
 
+  @include breakpoints.lg {
+    padding: 3rem 0 7rem;
+  }
+
   &__body {}
 
-  &__title {}
+  &__title {
+
+    @include breakpoints.lg {
+      text-align: center;
+    }
+  }
 
   &__flex {
     margin: 5rem 0 0 0;
     display: flex;
     align-items: stretch;
-    gap: 3rem;
+    justify-content: center;
+    gap: 2rem;
+
+    @include breakpoints.xxl {
+      flex-wrap: wrap;
+    }
+
+    @include breakpoints.lg {
+      margin: 3rem 0 0 0;
+    }
+
   }
 
   &__col {
-    flex: 0 1 25%;
+    flex: 1 1 23%;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    width: 100%;
+    padding: 2rem;
+
+    @include breakpoints.xxl {
+      flex: 1 1 48%;
+      box-shadow: 0 0 1rem #0000000d;
+      background-color: variables.$white;
+    }
 
 
     &-time {
       user-select: none;
       font-size: 4rem;
       font-weight: 200;
+
+      @include breakpoints.md {
+        font-size: 3rem;
+      }
     }
 
     &-about {
@@ -34,10 +66,20 @@
       font-size: 2.5rem;
       text-transform: uppercase;
       height: 6.5rem;
+
+      @include breakpoints.md {
+        height: auto;
+        font-size: 2rem;
+      }
     }
 
     &-text {
       font-size: 2rem !important;
+
+      @include breakpoints.md {
+        height: auto;
+        font-size: 1.8rem !important;
+      }
     }
   }
 }

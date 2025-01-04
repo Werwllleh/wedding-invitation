@@ -1,8 +1,13 @@
 @use "../variables";
+@use "../breakpoints";
 
 .guest-form {
   padding: 7rem 0;
   background-color: variables.$beige;
+
+  @include breakpoints.lg {
+    padding: 4rem 0 5rem;
+  }
 
   &__body {}
 
@@ -13,8 +18,26 @@
   &__text {
     margin: 5rem 0 0 0;
 
+    @include breakpoints.lg {
+      margin: 3rem auto 0 auto;
+      max-width: 70%;
+    }
+
+    @include breakpoints.md {
+      font-size: 2rem !important;
+    }
+
+    @include breakpoints.sm {
+      max-width: 90%;
+    }
+
+    @include breakpoints.xs {
+      max-width: none;
+    }
+
     p {
       text-align: center;
+
     }
   }
 
@@ -26,12 +49,17 @@
     label, .ant-form-item-explain-error {
       font-family: variables.$ff-main;
       letter-spacing: 0 !important;
+      text-align: center;
     }
 
     .ant-form-item-required {
       user-select: none;
       color: variables.$dark !important;
       font-size: 1.8rem !important;
+
+      @include breakpoints.md {
+        font-size: 1.6rem !important;
+      }
     }
 
     .ant-radio-group {
@@ -49,11 +77,15 @@
         line-height: 1.35;
         font-size: 1.6rem;
         text-align: center;
-        background-color: variables.$semi-white;
-        border: none;
+        background-color: variables.$white;
         padding: .5rem 1rem;
         font-weight: 400;
         color: variables.$dark;
+        border: 1px solid transparent;
+        transition: font-weight variables.$transition, border-color variables.$transition;
+
+        @include breakpoints.md {
+        }
 
         &::before {
           display: none;
@@ -61,8 +93,10 @@
       }
 
       .ant-radio-button-wrapper-checked {
-        color: variables.$white;
-        background-color: variables.$button-color;
+        //color: variables.$black;
+        background-color: variables.$semi-white;
+        font-weight: 500;
+        border-color: variables.$black;
       }
     }
 
@@ -70,7 +104,7 @@
     &-fields {}
 
     &-textarea {
-      background-color: variables.$semi-white;
+      background-color: variables.$white;
       font-family: variables.$ff-main;
       font-weight: 400;
       color: variables.$dark;
@@ -78,15 +112,24 @@
     }
 
     &-footer {
+      margin: 4rem 0 0 0;
       display: flex;
       justify-content: center;
     }
 
     &-submit {
       margin: 0 auto;
-      background-color: variables.$button-color;
-      color: variables.$semi-white;
+      background-color: variables.$semi-white;
       font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      line-height: 1;
+      border: 1px solid transparent;
+      transition: border-color variables.$transition;
+
+      &:hover {
+        border-color: variables.$black;
+      }
     }
   }
 }

@@ -1,11 +1,16 @@
 @use "../variables";
+@use "../breakpoints";
 
 .timer {
   display: grid;
   grid-template-columns: 11rem 3.2rem 11rem 3.2rem 11rem 3.2rem 11rem;
-  font-size: 6rem;
   justify-items: center;
   max-width: 60rem;
+
+  @include breakpoints.md {
+    grid-template-columns: 6rem 3.2rem 6rem 3.2rem 6rem 3.2rem 6rem;
+  }
+
 
   &__item {
     display: flex;
@@ -15,6 +20,17 @@
     user-select: none;
     color: variables.$dark;
     font-weight: 200;
+    font-size: 6rem;
+    width: 100%;
+
+    @include breakpoints.md {
+      font-size: 4rem;
+    }
+
+    @include breakpoints.xs {
+      font-size: 3rem;
+    }
+
 
     &::before {
       content: attr(data-title);
@@ -26,6 +42,10 @@
       font-size: 1.5rem;
       color: variables.$semi-dark;
       font-weight: 400;
+
+      @include breakpoints.md {
+        bottom: 0;
+      }
     }
   }
 
@@ -34,5 +54,14 @@
     pointer-events: none;
     user-select: none;
     font-weight: 200;
+    font-size: 6rem;
+
+    @include breakpoints.md {
+      font-size: 5rem;
+    }
+
+    @include breakpoints.xs {
+      font-size: 4rem;
+    }
   }
 }

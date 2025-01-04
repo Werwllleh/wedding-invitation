@@ -1,8 +1,13 @@
 @use "../variables";
+@use "../breakpoints";
 
 .detail-sec {
   padding: 7rem 0 10rem;
   background-color: variables.$beige;
+
+  @include breakpoints.md {
+    padding: 5rem 0 7rem;
+  }
 
   &__body {}
 
@@ -15,11 +20,29 @@
     display: flex;
     align-items: stretch;
     gap: 3rem;
+
+    @include breakpoints.lg {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include breakpoints.md {
+      margin: 3rem 0 0 0;
+    }
+
+    @include breakpoints.sm {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
   }
 
   &__card {
     flex: 0 1 33%;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+
+    @include breakpoints.lg {
+      flex: 1 1 33%;
+    }
 
     &-body {
       background-color: variables.$white;
@@ -31,12 +54,36 @@
       text-align: center;
       font-size: 3.2rem;
       font-weight: 300;
+
+      @include breakpoints.lg {
+        font-size: 2.8rem;
+      }
+
+      @include breakpoints.md {
+        font-size: 2.5rem;
+      }
+
+      @include breakpoints.sm {
+        font-size: 2.2rem;
+      }
     }
 
     &-text {
       margin: 2rem 0 0 0;
       font-size: 2rem !important;
       text-align: center;
+
+      @include breakpoints.lg {
+        font-size: 1.8rem !important;
+      }
+
+      @include breakpoints.md {
+        margin: 1rem 0 0 0;
+      }
+
+      @include breakpoints.sm {
+        font-size: 1.6rem !important;
+      }
     }
   }
 }

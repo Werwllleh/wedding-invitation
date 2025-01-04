@@ -148,13 +148,27 @@ main {
   max-width: 147rem;
   padding: 0 1.5rem;
 
-  @include breakpoints.sm {
-    max-width: 55rem;
+
+  @include breakpoints.xxl {
+    max-width: 125rem;
   }
 
-  @include breakpoints.xs {
-    max-width: 45rem;
+  @include breakpoints.xl {
+    max-width: 100rem;
   }
+
+  @include breakpoints.lg {
+
+  }
+
+  @include breakpoints.md {
+
+  }
+
+  @include breakpoints.sm {
+
+  }
+
 }
 
 .content {
