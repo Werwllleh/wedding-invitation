@@ -1,12 +1,23 @@
-import React from 'react';
+'use client';
+import React, {useRef} from 'react';
 import {formatDate} from "@/functions/formatDate";
-
+import {motion} from 'framer-motion';
+import useIsVisible from '@/functions/useIsVisible';
 
 
 const MainSec = () => {
 
+  const sectionRef = useRef(null);
+  const isVisible = useIsVisible(sectionRef);
+
   return (
-    <section className="main-section">
+    <motion.section
+      ref={sectionRef}
+      initial={{opacity: 0}}
+      animate={isVisible ? {opacity: 1} : {opacity: 0}}
+      transition={{duration: 0.6, ease: 'easeOut'}}
+      className="main-section"
+    >
       <div className="main-section__text">
         <h1 className="main-section__title h-title">Алексей и&nbsp;Анастасия</h1>
         <h4 className="main-section__date">
@@ -17,7 +28,7 @@ const MainSec = () => {
         <video className="main-section__video" loop={true} muted={true} autoPlay={true} src="/video/wedding-video.mp4"
                type="video/mp4"></video>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

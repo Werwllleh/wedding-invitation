@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+import React, {useRef} from 'react';
+import {motion} from 'framer-motion';
+import useIsVisible from '@/functions/useIsVisible';
 
 const details = [
   {
@@ -16,8 +19,18 @@ const details = [
 ]
 
 const DetailSec = () => {
+
+  const sectionRef = useRef(null);
+  const isVisible = useIsVisible(sectionRef);
+
   return (
-    <div className="detail-sec">
+    <motion.section
+      ref={sectionRef}
+      initial={{opacity: 0}}
+      animate={isVisible ? {opacity: 1} : {opacity: 0}}
+      transition={{duration: 0.6, ease: 'easeOut'}}
+      className="detail-sec"
+    >
       <div className="container">
         <div className="detail-sec__body">
           <h2 className="detail-sec__title sec-title">Детали</h2>
@@ -35,7 +48,7 @@ const DetailSec = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

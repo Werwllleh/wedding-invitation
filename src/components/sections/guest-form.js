@@ -1,8 +1,10 @@
 'use client';
-import React from 'react';
+import React, {useRef} from 'react';
 import {formatDate} from "@/functions/formatDate";
 import {Form, Input, message, Radio} from "antd";
 import axios from "axios";
+import {motion} from 'framer-motion';
+import useIsVisible from '@/functions/useIsVisible';
 
 const options = [
   {
@@ -20,6 +22,9 @@ const options = [
 ];
 
 const GuestForm = () => {
+
+  const sectionRef = useRef(null);
+  const isVisible = useIsVisible(sectionRef);
 
   const [form] = Form.useForm();
 
@@ -45,7 +50,13 @@ const GuestForm = () => {
 
 
   return (
-    <div className="guest-form">
+    <motion.section
+      ref={sectionRef}
+      initial={{opacity: 0}}
+      animate={isVisible ? {opacity: 1} : {opacity: 0}}
+      transition={{duration: 0.6, ease: 'easeOut'}}
+      className="guest-form"
+    >
       <div className="container">
         <div className="guest-form__body">
           <h2 className="guest-form__title sec-title">Анкета гостя</h2>
@@ -93,7 +104,7 @@ const GuestForm = () => {
           </Form>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

@@ -1,9 +1,22 @@
-import React from 'react';
+'use client';
+import React, {useRef} from 'react';
 import Link from "next/link";
+import {motion} from 'framer-motion';
+import useIsVisible from '@/functions/useIsVisible';
 
 const Location = () => {
+
+  const sectionRef = useRef(null);
+  const isVisible = useIsVisible(sectionRef);
+
   return (
-    <div className="location">
+    <motion.section
+      ref={sectionRef}
+      initial={{opacity: 0}}
+      animate={isVisible ? {opacity: 1} : {opacity: 0}}
+      transition={{duration: 0.6, ease: 'easeOut'}}
+      className="location"
+    >
       <div className="location__info">
         <h2 className="location__title sec-title">Локация</h2>
         <div className="location__text">
@@ -17,7 +30,7 @@ const Location = () => {
       <div className="location__bg">
         <img src="/photo/verona.webp" alt="verona hall"/>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

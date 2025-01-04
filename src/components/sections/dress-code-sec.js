@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+import React, {useRef} from 'react';
+import {motion} from 'framer-motion';
+import useIsVisible from '@/functions/useIsVisible';
 
 const colors = [
   {
@@ -16,8 +19,18 @@ const colors = [
 ]
 
 const DressCodeSec = () => {
+
+  const sectionRef = useRef(null);
+  const isVisible = useIsVisible(sectionRef);
+
   return (
-    <div className="dress-code-sec">
+    <motion.section
+      ref={sectionRef}
+      initial={{opacity: 0}}
+      animate={isVisible ? {opacity: 1} : {opacity: 0}}
+      transition={{duration: 0.6, ease: 'easeOut'}}
+      className="dress-code-sec"
+    >
       <div className="container">
         <div className="dress-code-sec__body">
           <h2 className="dress-code-sec__title sec-title">Дресс-код</h2>
@@ -53,7 +66,7 @@ const DressCodeSec = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 
