@@ -29,6 +29,7 @@
 
     @include breakpoints.sm {
       max-width: 90%;
+      font-size: 1.8rem !important;
     }
 
     @include breakpoints.xs {
@@ -60,6 +61,10 @@
 
       @include breakpoints.md {
         font-size: 1.6rem !important;
+      }
+
+      @include breakpoints.sm {
+        font-size: 1.4rem !important;
       }
     }
 

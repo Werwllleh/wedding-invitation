@@ -19,6 +19,7 @@
     z-index: 2;
     pointer-events: none;
     user-select: none;
+    padding: 0 1.5rem;
   }
 
   &__title {
@@ -50,6 +51,10 @@
 
     @include breakpoints.sm {
       font-size: 4rem;
+    }
+
+    @include breakpoints.xs {
+      font-size: 3.5rem;
     }
   }
 
