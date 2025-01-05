@@ -62,7 +62,7 @@ const GuestForm = () => {
           <h2 className="guest-form__title sec-title">Анкета гостя</h2>
           <div className="guest-form__text text">
             <p>Ваши ответы на&nbsp;вопросы очень помогут нам при&nbsp;организации свадьбы.</p>
-            <p>Будем ждать ответ до&nbsp;{formatDate('2025.07.01', 'DD.MMMM.YYYY')}&nbsp;г.</p>
+            <p>Будем ждать ответ до&nbsp;{formatDate(process.env.NEXT_PUBLIC_DATE || '2025-08-10T00:00:00', 'DD.MMMM.YYYY')}&nbsp;г.</p>
           </div>
           <Form form={form} onFinish={handleSubmit} variant="borderless" className="guest-form__form" layout="vertical">
             <div className="guest-form__form-fields">
