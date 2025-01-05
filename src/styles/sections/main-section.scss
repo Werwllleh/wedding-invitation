@@ -91,6 +91,8 @@
   }
 
   &__video {
+    pointer-events: none;
+    user-select: none;
     display: flex;
     object-fit: cover;
     width: 100%;
