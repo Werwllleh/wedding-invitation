@@ -34,7 +34,7 @@ const GuestForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(values),
+        body: values,
       });
 
       if (response.ok) {
