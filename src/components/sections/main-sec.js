@@ -25,8 +25,10 @@ const MainSec = () => {
         </h4>
       </div>
       <div className="main-section__bg">
-        <video className="main-section__video" playsInline loop={true} muted={true} autoPlay={true} src="/video/wedding-video.mp4"
-               type="video/mp4"></video>
+        <video className="main-section__video" playsInline loop={true} muted={true} autoPlay={true}>
+          <source src="/video/wedding-video.webm" type="video/webm"/>
+          <source src="/video/wedding-video.mp4" type="video/mp4"/>
+        </video>
       </div>
     </motion.section>
   );
