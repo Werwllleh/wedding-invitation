@@ -11,25 +11,30 @@ import nodemailer from "nodemailer";
 });*/
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "yandex",
+  host: "smtp.yandex.ru",
+  port: 465,
+  secure: true,
   auth: {
-    user: process.env.NEXT_PUBLIC_UM,
-    pass: process.env.NEXT_PUBLIC_UMPP
+    user: process.env.NEXT_PUBLIC_YANDEX_LOGIN,
+    pass: process.env.NEXT_PUBLIC_YANDEX_PASS
   }
 });
 
 
 export async function POST(req) {
   try {
+
     const data = await req.json();
 
     await transporter.sendMail({
-      from: process.env.NEXT_PUBLIC_UM, // sender address
+      from: process.env.NEXT_PUBLIC_YANDEX_LOGIN, // sender address
       to: "crj-100@yandex.ru", // list of receivers
       subject: "Ответ на электронное пригласительное", // Subject line
       // text: "Hello world?", // plain text body
       html: `<p>Кто - ${data.body.persons}</p></br><p>Статус - ${data.body.presence}</p>`, // html body
     });
+
 
     console.log('Получены данные:', data);
 
