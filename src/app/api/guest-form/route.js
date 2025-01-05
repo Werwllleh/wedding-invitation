@@ -42,7 +42,7 @@ export async function POST(req) {
     const data = await req.json();
 
     await transporter.sendMail({
-      from: 'aa-invitation.vercel.app', // sender address
+      from: process.env.NEXT_PUBLIC_YANDEX_LOGIN, // sender address
       to: "crj-100@yandex.ru", // list of receivers
       subject: "Ответ на электронное пригласительное", // Subject line
       // text: "Hello world?", // plain text body
