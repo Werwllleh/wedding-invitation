@@ -29,8 +29,8 @@ const DescriptionsSec = () => {
               className="descriptions-sec__date">{formatDate(process.env.NEXT_PUBLIC_DATE || '2025-08-10T00:00:00', 'DD.MM.YYYY')}</span>
           </div>
           <div className="descriptions-sec__photos">
-            <img src="/photo/ds-1.jpg" alt=""/>
-            <img src="/photo/ds-2.jpg" alt=""/>
+            <img src="/photo/ds-1.webp" alt=""/>
+            <img src="/photo/ds-2.webp" alt=""/>
           </div>
         </div>
       </div>

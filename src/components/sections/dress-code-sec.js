@@ -45,11 +45,11 @@ const DressCodeSec = () => {
               })}
             </div>
             <div className="dress-code-sec__photos">
-              <img src="/photo/dc-1.jpg" alt=""/>
-              <img src="/photo/dc-2.jpg" alt=""/>
-              <img src="/photo/dc-3.jpg" alt=""/>
-              <img src="/photo/dc-4.jpg" alt=""/>
-              <img src="/photo/dc-5.jpg" alt=""/>
+              <img src="/photo/dc-1.webp" alt=""/>
+              <img src="/photo/dc-2.webp" alt=""/>
+              <img src="/photo/dc-3.webp" alt=""/>
+              <img src="/photo/dc-4.webp" alt=""/>
+              <img src="/photo/dc-5.webp" alt=""/>
             </div>
             <div className="dress-code-sec__about">
               <div className="dress-code-sec__about-item">

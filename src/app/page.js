@@ -24,7 +24,7 @@ export default function Home() {
         <PhotoSec url={'/photo/pb-1.webp'} />
         <DressCodeSec />
         <GuestForm />
-        <PhotoSec text={"До встречи"} url={'/photo/pb-2.jpg'} />
+        <PhotoSec text={"До встречи"} url={'/photo/pb-2.webp'} />
       </main>
       {/*<Footer/>*/}
     </>
