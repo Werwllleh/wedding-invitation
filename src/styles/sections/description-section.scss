@@ -76,11 +76,21 @@
     img {
       transition: variables.$transition;
 
+      @include breakpoints.xl {
+        width: 100% !important;
+      }
+
       &:nth-child(1) {
         max-height: 45rem;
         width: 45rem;
         height: 100%;
         object-fit: cover;
+
+        @include breakpoints.xl {
+          object-position: bottom;
+          max-height: 34rem;
+          clip-path: inset(0 0 3rem);
+        }
       }
 
       &:nth-child(2) {
@@ -88,7 +98,7 @@
         transform: translateX(-5rem) translateY(5rem);
 
         @include breakpoints.xl {
-          transform: translateX(0) translateY(-5rem) scale(1.35);
+          transform: translateX(0) translateY(-1rem);
         }
       }
     }
