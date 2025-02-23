@@ -1,7 +1,7 @@
 'use client';
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {formatDate} from "@/functions/formatDate";
-import {Form, Input, message, Radio} from "antd";
+import {Form, Input, message, Radio, Spin} from "antd";
 import axios from "axios";
 import {motion} from 'framer-motion';
 import useIsVisible from '@/functions/useIsVisible';
@@ -41,9 +41,11 @@ const GuestForm = () => {
   };
 
   const [form] = Form.useForm();
+  const [formDisabled, setFormDisabled] = useState(false);
 
   const handleSubmit = async (values) => {
     try {
+      setFormDisabled(true)
       const response = await axios.post('/api/guest-form', {
         headers: {
           'Content-Type': 'application/json',
@@ -51,17 +53,20 @@ const GuestForm = () => {
         body: values,
       });
 
-      console.log(response);
+      // console.log(response);
 
       if (response.status === 200) {
         success('Ваш ответ успешно отправлен. Спасибо!');
         form.resetFields();
+        setFormDisabled(false);
       } else {
         error('Ошибка при отправке. Попробуйте позже')
+        setFormDisabled(false)
         throw new Error('Ошибка при отправке. Попробуйте позже');
       }
     } catch (error) {
-      error('Ошибка отправки данных')
+      error('Ошибка отправки данных');
+      setFormDisabled(false);
       message.error(error.message || 'Ошибка отправки данных.');
     }
   };
@@ -84,7 +89,11 @@ const GuestForm = () => {
               <p>Ваши ответы на&nbsp;вопросы очень помогут нам при&nbsp;организации свадьбы.</p>
               <p>Будем ждать ответ до&nbsp;{formatDate('2025-08-01T00:00:00', 'DD.MMMM.YYYY')}&nbsp;г.</p>
             </div>
-            <Form form={form} onFinish={handleSubmit} variant="borderless" className="guest-form__form"
+            <Form form={form}
+                  onFinish={handleSubmit}
+                  variant="borderless"
+                  className="guest-form__form"
+                  disabled={formDisabled}
                   layout="vertical">
               <div className="guest-form__form-fields">
                 <Form.Item
@@ -122,6 +131,10 @@ const GuestForm = () => {
                   Отправить
                 </button>
               </div>
+              {formDisabled && (
+                <div className="guest-form__spin">
+                  <Spin size="large" />
+                </div>)}
             </Form>
           </div>
         </div>
