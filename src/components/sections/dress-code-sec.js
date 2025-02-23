@@ -9,8 +9,8 @@ const colors = [
     hex: '#ffffff',
   },
   {
-    title: 'grey',
-    hex: '#cfcfcf',
+    title: 'green',
+    hex: '#508E75FF',
   },
   {
     title: 'black',
