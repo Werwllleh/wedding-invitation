@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack 3080",
+    "dev": "next dev --turbopack -p 3080",
     "build": "next build",
-    "start": "next start 3080",
+    "start": "next start -p 3080",
     "lint": "next lint"
   },
   "dependencies": {
