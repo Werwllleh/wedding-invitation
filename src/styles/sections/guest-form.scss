@@ -18,6 +18,7 @@
   &__text {
     margin: 5rem 0 0 0;
 
+
     @include breakpoints.lg {
       margin: 3rem auto 0 auto;
       max-width: 70%;
@@ -46,7 +47,14 @@
     position: relative;
     max-width: 60rem;
     margin: 5rem auto 0 auto;
-    padding: 1rem;
+    padding: 3rem 2rem 5rem;
+    border: 10px solid variables.$white;
+    box-shadow: 0 0 10px 0 #d1d1d1;
+
+    @include breakpoints.md {
+      padding: 3rem 1rem 5rem;
+      border-width: 5px;
+    }
 
 
     label, .ant-form-item-explain-error {
@@ -55,19 +63,22 @@
       text-align: center;
     }
 
+    .ant-form-item-explain-error {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
     .ant-form-item-required {
       user-select: none;
       color: variables.$dark !important;
-      font-size: 1.8rem !important;
+      font-size: 2rem !important;
       text-align: left;
+      font-weight: 300;
 
       @include breakpoints.md {
         font-size: 1.6rem !important;
       }
 
-      @include breakpoints.sm {
-        font-size: 1.4rem !important;
-      }
     }
 
     .ant-radio-group {
@@ -86,13 +97,15 @@
         font-size: 1.6rem;
         text-align: center;
         background-color: variables.$white;
-        padding: .5rem 1rem;
+        padding: 1.5rem 1rem;
         font-weight: 400;
         color: variables.$dark;
         border: 1px solid transparent;
         transition: font-weight variables.$transition, border-color variables.$transition;
 
         @include breakpoints.md {
+          padding: 1rem;
+          font-size: 1.5rem;
         }
 
         &::before {
@@ -102,9 +115,9 @@
 
       .ant-radio-button-wrapper-checked {
         //color: variables.$black;
-        background-color: variables.$semi-white;
-        font-weight: 500;
-        border-color: variables.$black;
+        background-color: #f5dec1;
+        font-weight: 400;
+        border-color: #f5dec1;
       }
     }
 
@@ -114,8 +127,16 @@
       background-color: variables.$white;
       font-family: variables.$ff-main;
       font-weight: 400;
+      font-size: 1.6rem;
+      letter-spacing: 0.05rem;
       color: variables.$dark;
       border: none;
+
+      &::placeholder {
+        color: variables.$grey;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+      }
     }
 
     &-footer {
@@ -126,17 +147,17 @@
 
     &-submit {
       margin: 0 auto;
-      background-color: variables.$semi-white;
-      font-weight: 500;
-      text-transform: uppercase;
+      background-color: #f5dec1;
+      //border: 2px solid variables.$grey-light;
+      font-weight: 400;
+      color: variables.$dark;
+      font-size: 1.8rem !important;
       line-height: 1;
-      border: 1px solid transparent;
       font-family: variables.$ff-main !important;
       padding: 1rem 4rem !important;
 
       &:hover {
         transform: scale(1.025);
-        box-shadow: 0 0 1.5rem .5rem #f1f1f1;
       }
     }
   }

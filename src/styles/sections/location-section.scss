@@ -32,7 +32,6 @@
       opacity: .9;
 
       @include breakpoints.md {
-        filter: blur(3rem);
         opacity: .95;
       }
     }

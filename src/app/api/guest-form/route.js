@@ -39,13 +39,3 @@ export async function POST(req) {
     return NextResponse.json({message: 'Ошибка сервера'}, {status: 500});
   }
 }
-
-export async function OPTIONS() {
-  return NextResponse.json({}, {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
-  });
-}

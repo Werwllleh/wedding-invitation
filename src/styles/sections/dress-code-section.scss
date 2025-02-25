@@ -42,7 +42,7 @@
     gap: 3rem;
 
     @include breakpoints.md {
-      gap: 2rem;
+      gap: 1.5rem;
     }
   }
 
@@ -63,38 +63,39 @@
   }
 
   &__photos {
-    display: flex;
+    display: grid;
     align-items: stretch;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "i1 i2 i2"
+        "i3 i4 i5";
     gap: 2rem;
+
+    @include breakpoints.md {
+      gap: 1.5rem;
+    }
 
     img {
       display: flex;
       object-fit: cover;
+      max-height: 23rem;
+      width: 100%;
 
       &:nth-child(1) {
-        flex: 1 1 34%;
-        max-height: 20rem;
+        grid-area: i1;
       }
-
       &:nth-child(2) {
-        flex: 1 1 63%;
-        max-height: 20rem;
+        grid-area: i2;
       }
-
       &:nth-child(3) {
-        flex: 1 1 31%;
-        max-height: 23rem;
+        grid-area: i3;
       }
-
       &:nth-child(4) {
-        flex: 1 1 31%;
-        max-height: 23rem;
+        grid-area: i4;
       }
-
       &:nth-child(5) {
-        flex: 1 1 31%;
-        max-height: 23rem;
+        grid-area: i5;
       }
     }
   }

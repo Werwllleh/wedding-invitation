@@ -47,6 +47,11 @@
   &__text {
     max-width: 60rem;
 
+    span {
+      text-transform: uppercase;
+      color: #ee881e;
+    }
+
     @include breakpoints.lg {
       max-width: 80%;
       text-align: center;
@@ -59,8 +64,12 @@
   }
 
   &__date {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 200;
+
+    @include breakpoints.md {
+      font-size: 3rem;
+    }
   }
 
   &__photos {

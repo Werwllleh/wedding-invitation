@@ -9,8 +9,16 @@ const colors = [
     hex: '#ffffff',
   },
   {
+    title: 'milk',
+    hex: '#fdeedc',
+  },
+  {
+    title: 'brown',
+    hex: '#a4826c',
+  },
+  {
     title: 'green',
-    hex: '#508E75FF',
+    hex: '#618879',
   },
   {
     title: 'black',

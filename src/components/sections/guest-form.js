@@ -12,10 +12,6 @@ const options = [
     value: 'Приду',
   },
   {
-    label: <>Приду не один / с&nbsp;семьей</>,
-    value: 'Приду не один / с семьей',
-  },
-  {
     label: <>Не&nbsp;смогу придти</>,
     value: 'Не смогу придти',
   },
@@ -87,7 +83,8 @@ const GuestForm = () => {
             <h2 className="guest-form__title sec-title">Анкета гостя</h2>
             <div className="guest-form__text text">
               <p>Ваши ответы на&nbsp;вопросы очень помогут нам при&nbsp;организации свадьбы.</p>
-              <p>Будем ждать ответ до&nbsp;{formatDate('2025-08-01T00:00:00', 'DD.MMMM.YYYY')}&nbsp;г.</p>
+              <p>Пожалуйста, отнеситесь серьезно к&nbsp;заполнению формы.</p>
+              <p>Будем ждать ответов до&nbsp;{formatDate('2025-07-27T00:00:00', 'DD.MMMM.YYYY')}&nbsp;г.</p>
             </div>
             <Form form={form}
                   onFinish={handleSubmit}
@@ -120,7 +117,7 @@ const GuestForm = () => {
                 >
                   <Input.TextArea
                     autoSize={{minRows: 2}}
-                    placeholder={'Укажите имена и фамилии'}
+                    placeholder={'Укажите Ваше ФИО, а также ФИО тех, кто будет с Вами'}
                     className="guest-form__form-textarea"
 
                   />
@@ -128,7 +125,7 @@ const GuestForm = () => {
               </div>
               <div className="guest-form__form-footer">
                 <button className="guest-form__form-submit style-btn" type="submit">
-                  Отправить
+                  Отправить ответ
                 </button>
               </div>
               {formDisabled && (

@@ -72,6 +72,10 @@ img {
   font-weight: 300;
   letter-spacing: -0.085rem;
   line-height: 1.55;
+
+  @include breakpoints.md {
+    letter-spacing: -0.05rem;
+  }
 }
 
 .style-btn {
