@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Timer = () => {
-  const deadline = new Date(process.env.NEXT_PUBLIC_DATE || '2025-08-10T00:00:00');
+  const deadline = new Date(process.env.NEXT_PUBLIC_DATE);
 
   // Состояния для таймера
   const [timeLeft, setTimeLeft] = useState({

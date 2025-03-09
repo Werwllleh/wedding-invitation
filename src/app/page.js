@@ -8,8 +8,12 @@ import DetailSec from "@/components/sections/detail-sec";
 import DressCodeSec from "@/components/sections/dress-code-sec";
 import PhotoSec from "@/components/sections/photo-sec";
 import GuestForm from "@/components/sections/guest-form";
+import dayjs from "dayjs";
 
 export default function Home() {
+
+  const dateAfter = dayjs().isAfter(process.env.NEXT_PUBLIC_DATE, 'day');
+
 
   return (
     <>
@@ -24,7 +28,7 @@ export default function Home() {
         <DressCodeSec />
         <GuestForm />
         <TimerSec />
-        <PhotoSec text={"До встречи"} url={'/photo/pb-2.webp'} />
+        <PhotoSec text={dateAfter ? 'Спасибо всем!' : 'До встречи'} url={'/photo/pb-2.webp'} />
       </main>
       {/*<Footer/>*/}
     </>
