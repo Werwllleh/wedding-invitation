@@ -3,6 +3,7 @@ import React, {useRef} from 'react';
 import Link from "next/link";
 import {motion} from 'framer-motion';
 import useIsVisible from '@/functions/useIsVisible';
+import {ymEvent} from "@/functions/ym-event";
 
 const Location = () => {
 
@@ -24,6 +25,7 @@ const Location = () => {
           <p className="text">Находится зал по адресу: г. Чебоксары, проспект Максима Горького, 2М</p>
         </div>
         <Link target="_blank"
+              onClick={() => ymEvent('map')}
               href="https://yandex.ru/maps/45/cheboksary/?ll=47.209938%2C56.149375&mode=poi&poi%5Bpoint%5D=47.209917%2C56.149615&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D70330954140&z=19"
               className="location__button style-btn">Показать на карте</Link>
       </div>

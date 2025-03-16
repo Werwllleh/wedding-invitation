@@ -14,7 +14,6 @@
 .idea
 # testing
 /coverage
-ecosystem.config.js
 # next.js
 /.next/
 /out/

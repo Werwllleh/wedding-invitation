@@ -7,6 +7,7 @@ import {motion} from 'framer-motion';
 import useIsVisible from '@/functions/useIsVisible';
 import dayjs from "dayjs";
 import Link from "next/link";
+import {ymEvent} from "@/functions/ym-event";
 
 const options = [
   {
@@ -55,6 +56,7 @@ const GuestForm = () => {
 
       if (response.status === 200) {
         success('Ваш ответ успешно отправлен. Спасибо!');
+        ymEvent('send_form');
         form.resetFields();
         setFormDisabled(false);
       } else {
@@ -91,6 +93,7 @@ const GuestForm = () => {
                   <p>Будем ждать ответов до&nbsp;{formatDate('2025-07-27T00:00:00', 'DD.MMMM.YYYY')}&nbsp;г.</p>
                 </div>
                 <Form form={form}
+                      requiredMark={false}
                       onFinish={handleSubmit}
                       variant="borderless"
                       className="guest-form__form"
@@ -146,8 +149,9 @@ const GuestForm = () => {
               </div>
             )}
             <div className="guest-form__contacts">
-              <p className="text">По всем вопросам обращаться к организатору:</p>
+              <p className="text">По всем вопросам обращаться к&nbsp;организатору:</p>
               <Link
+                onClick={() => ymEvent('organizer')}
                 className="guest-form__contacts_feedback style-btn"
                 target={"_blank"}
                 href={"https://t.me/yulyasha_event"}
