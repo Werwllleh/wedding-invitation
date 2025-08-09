@@ -36,6 +36,7 @@
   }
 
   &__col {
+    position: relative;
     flex: 1 1 23%;
     display: flex;
     flex-direction: column;
@@ -47,6 +48,27 @@
       flex: 1 1 48%;
       box-shadow: 0 0 1rem #0000000d;
       background-color: variables.$white;
+    }
+
+    &:nth-child(1) {
+      pointer-events: none;
+      background-color: variables.$error-color;
+
+      &::after {
+        content: "ОТМЕНЕНО";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 700;
+        color: variables.$semi-white;
+        text-align: center;
+        background-color: #a55353c2;
+      }
     }
 
 
