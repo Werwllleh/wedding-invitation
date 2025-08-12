@@ -5,11 +5,11 @@ import {motion} from 'framer-motion';
 import useIsVisible from '@/functions/useIsVisible';
 
 const info = [
-  {
+  /*{
     time: '2025-08-10T14:00:00',
     about: 'Свадебный кортеж',
     text: 'Веселые покатушки и фотосессия с гостями торжества'
-  },
+  },*/
   {
     time: '2025-08-10T15:30:00',
     about: 'Сбор гостей',

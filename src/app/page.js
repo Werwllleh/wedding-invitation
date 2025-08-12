@@ -26,9 +26,9 @@ export default function Home() {
         <DetailSec />
         <PhotoSec url={'/photo/pb-1.webp'} />
         <DressCodeSec />
-        <GuestForm />
-        <TimerSec />
-        <PhotoSec text={dateAfter ? 'Спасибо всем!' : 'До встречи'} url={'/photo/pb-2.webp'} />
+        {/*<GuestForm />*/}
+        {/*<TimerSec />*/}
+        <PhotoSec text={'Свадьба состоялась!'} url={'/photo/pb-2.webp'} />
       </main>
       {/*<Footer/>*/}
     </>
